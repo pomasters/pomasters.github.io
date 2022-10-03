@@ -1,0 +1,87 @@
+@font-face {
+	font-family: "kenya-NewRodinProN-B";
+	font-weight: bold;
+	src: url("kenya-NewRodinProN-B.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "kenya-NewRodinProN-EB";
+	font-weight: bold;
+	src: url("kenya-NewRodinProN-EB.otf") format("opentype");
+}
+
+
+* { box-sizing: border-box; }
+
+body {
+	background-color: black;
+	background-image: url("bg.png");
+	background-attachment: fixed;
+	font-family: "kenya-NewRodinProN-EB";
+}
+
+#tools {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tool {
+	width: 46%;
+	height: fit-content;
+	margin: 2%;
+	padding: 1% 2%;
+	background-color: rgb(150 200 220 / 40%);
+	border-radius: 10px;
+	background-attachment: fixed;
+	position: relative;
+}
+
+.tool img {
+	width: 100%;
+	margin: 2% 0;
+	border: 2px solid #32788c5c;
+	border-radius: 5px;
+}
+
+.tool p a {
+	color: #32788c;
+	text-decoration: none;
+	margin: 0;
+}
+
+.tool p a:hover {
+	background-color: #32788cac;
+	padding: 10px;
+	color: white;
+	border-radius: 6px;
+	transition-duration: 0.1s;
+}
+
+.tool p a:hover img {
+	filter: brightness(10);
+}
+
+.tool p img {
+	width: 20px;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	margin-left: 10px;
+	filter: hue-rotate(346deg)
+}
+
+
+@media only screen and (max-width: 1024px) {
+	#tools {
+		flex-direction: column;
+	}
+
+	.tool {
+		width: 96%;
+	}
+
+	.tool img {
+		margin: 1% 0;
+	}
+}
